@@ -30,4 +30,4 @@ describe 'post stream', ->
     for post in @posts
       post.time.should.be.an.instanceOf(Number)
       (post.time > year2000).should.be.true
-      (post.time < year3000).should.be.true # twitter should be dead by then
+      (post.time < year3000).should.be.true # vine should be dead by then
