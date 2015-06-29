@@ -1,6 +1,8 @@
-should = require 'should'
+{validate} = require('json-schema')
 isStream = require 'isstream'
+should = require 'should'
 
+schema = require '../lib/response.schema'
 VinePosts = require '../lib'
 
 describe 'post stream', ->
@@ -13,9 +15,8 @@ describe 'post stream', ->
 
   it 'should stream post objects', (done) ->
     @timeout(4000)
-    @stream.on('readable', =>
-      post = @stream.read()
-      post.should.be.an.instanceOf(Object)
+    @stream.on('data', (post) =>
+      validate(post, schema).errors.should.eql([])
       @posts.push post
     ).on('end', =>
       @posts.length.should.be.above(0)
