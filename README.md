@@ -1,7 +1,7 @@
 # Vine Screen Scrape
 [![Build Status](http://img.shields.io/travis/slang800/vine-screen-scrape.svg?style=flat-square)](https://travis-ci.org/slang800/vine-screen-scrape) [![NPM version](http://img.shields.io/npm/v/vine-screen-scrape.svg?style=flat-square)](https://www.npmjs.org/package/vine-screen-scrape) [![NPM license](http://img.shields.io/npm/l/vine-screen-scrape.svg?style=flat-square)](https://www.npmjs.org/package/vine-screen-scrape)
 
-A tool for scraping public data from Vine. It can scrape any posts that a non-logged-in user can see (which is the full history of any public account).
+A tool for scraping public data from Vine. It can scrape any posts that a non-logged-in user can see (which is the full history of any public account). See `lib/response.schema.json` for the format of the response.
 
 ## Example
 ### CLI
