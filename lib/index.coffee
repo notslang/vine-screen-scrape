@@ -68,7 +68,7 @@ class VinePosts extends Readable
       if lastPost? then @push(lastPost)
       lastPost =
         username: @username
-        _id: res.postId
+        id: res.postId
         loop: res.loops.count
         comment: res.comments.count
         repost: res.reposts.count
