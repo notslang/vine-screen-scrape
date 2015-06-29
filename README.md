@@ -1,7 +1,7 @@
 # Vine Screen Scrape
 [![Build Status](http://img.shields.io/travis/slang800/vine-screen-scrape.svg?style=flat-square)](https://travis-ci.org/slang800/vine-screen-scrape) [![NPM version](http://img.shields.io/npm/v/vine-screen-scrape.svg?style=flat-square)](https://www.npmjs.org/package/vine-screen-scrape) [![NPM license](http://img.shields.io/npm/l/vine-screen-scrape.svg?style=flat-square)](https://www.npmjs.org/package/vine-screen-scrape)
 
-A tool for scraping public data from Vine, without needing to get permission from Vine. It can (theoretically) scrape anything that a non-logged-in user can see. But, right now it only supports getting posts for a given username.
+A tool for scraping public data from Vine. It can scrape any posts that a non-logged-in user can see (which is the full history of any public account).
 
 ## Example
 ### CLI
@@ -69,11 +69,9 @@ streamOfPosts.on('readable', function() {
 ```
 
 ## Why?
-The fact that Vine requires an app to be registered just to access the data that is publicly available on their site is excessively controlling. Scripts should be able to consume the same data as people, and with the same level of authentication. Sadly, Vine doesn't provide an open, structured, and machine readable API.
-
-So, we're forced to use a method that Vine cannot effectively shut down without harming themselves: scraping their user-facing site.
+Vine doesn't provide an open, structured, and machine readable API, so, we're forced to scrape their user-facing site.
 
 ## Caveats
 - This is probably against the Vine TOS, so don't use it if that sort of thing worries you.
 - Whenever Vine updates certain parts of their front-end this scraper will need to be updated to support the new API.
-- You can't scrape protected accounts or get engagement rates / impression counts (cause it's not public duh).
+- You can't scrape protected accounts (cause it's not public duh).
