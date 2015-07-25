@@ -23,7 +23,7 @@
     "should": "^5.2.0"
   },
   "homepage": "https://github.com/slang800/vine-screen-scrape",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "main": "lib",
   "repository": {
     "type": "git",
